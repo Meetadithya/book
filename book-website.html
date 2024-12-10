@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code & Converse: Basics of Coding and Prompt Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #1E1E1E;
+            --text-light: #D4D4D4;
+            --code-green: #6A9955;
+            --code-blue: #569CD6;
+            --code-red: #CE9178;
+            --code-yellow: #DCDCAA;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            font-size: 22px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        .code-block {
+            font-family: 'Courier Prime', monospace;
+            background-color: #2C2C2C;
+            border-left: 6px solid #007ACC;
+            padding: 20px;
+            margin: 25px 0;
+            overflow-x: auto;
+            font-size: 20px;
+        }
+        .chapter {
+            background-color: #252526;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .chapter-title {
+            color: #569CD6;
+            border-bottom: 3px solid #569CD6;
+            padding-bottom: 15px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        header p {
+            font-size: 1.5em;
+        }
+        .nav {
+            background-color: #252526;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .nav a {
+            color: #569CD6;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .author-section {
+            background-color: #252526;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1em;
+        }
+        .author-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url('author-image.jpg'); /* Replace with actual image */
+            background-size: cover;
+            margin-right: 30px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #252526;
+            font-size: 1em;
+        }
+        @media (max-width: 1200px) {
+            body { font-size: 20px; }
+            .container { padding: 20px; }
+        }
+        @media (max-width: 768px) {
+            body { font-size: 18px; }
+            .nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .author-avatar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 30px;">
+            <h1 style="color: #569CD6;">Code & Converse</h1>
+            <p>Basics of Coding and Prompt Engineering for Young Devs</p>
+        </header>
+
+        <nav class="nav">
+            <a href="#toc">Table of Contents</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#chapter1">Chapter 1</a>
+            <a href="#chapter2">Chapter 2</a>
+            <a href="#chapter3">Chapter 3</a>
+            <a href="#chapter4">Chapter 4</a>
+            <a href="#chapter5">Chapter 5</a>
+            <a href="#chapter6">Chapter 6</a>
+            <a href="#chapter7">Chapter 7</a>
+            <a href="#epilogue">Epilogue</a>
+            <a href="#author">About Author</a>
+        </nav>
+
+        <section id="toc" class="chapter">
+            <h2 class="chapter-title">Table of Contents</h2>
+            <ol>
+                <li>Introduction to Coding</li>
+                <li>Understanding Programming Languages</li>
+                <li>Basics of Prompt Engineering</li>
+                <li>Tools and Resources for Young Developers</li>
+                <li>Practical Coding Exercises</li>
+                <li>Advanced Prompt Techniques</li>
+                <li>Conclusion and Next Steps</li>
+            </ol>
+        </section>
+
+        <section id="introduction" class="chapter">
+            <h2 class="chapter-title">Introduction: Why Code, Why Prompt?</h2>
+            <p>Imagine this: you have a superpower to create anything you want—games, websites, apps, or even robots! Coding gives you that power. But wait, there's another trick up your sleeve: prompt engineering. It's like asking a genie for a wish, but instead of magic, you get the intelligence of AI to help you solve problems and create cool stuff.</p>
+            <p>This book is your beginner's guide to both. You'll learn the basics of programming to build your creations and how to use AI tools by crafting the right prompts. Together, these skills will turn you into a developer who's ready to tackle anything!</p>
+            <p>Let's start this exciting journey. Ready?</p>
+        </section>
+
+        <section id="chapter1" class="chapter">
+            <h2 class="chapter-title">Chapter 1: Meet Your First Program</h2>
+            <p>Welcome to the world of coding! Every coder begins with the classic phrase:</p>
+            <div class="code-block">
+                <code>
+<span class="blue">print</span>(<span class="red">"Hello, World!"</span>)
+                </code>
+            </div>
+            <p>This little line is your first program. What does it do? It tells your computer to say Hello, World! in its own language.</p>
+            
+            <h3>How to Try It:</h3>
+            <ol>
+                <li>Open a website like Replit or install Python on your computer.</li>
+                <li>Type the above code and press run.</li>
+                <li>Ta-da! You've just written your first program.</li>
+            </ol>
+
+            <h3>AI Prompt Practice:</h3>
+            <ul>
+                <li>"Explain what print("Hello, World!") does in Python."</li>
+                <li>"Can you give me another example of how to use print?"</li>
+            </ul>
+            <p>See how your question shapes the answer? A clear and specific prompt gets you the best help.</p>
+        </section>
+
+        <section id="chapter2" class="chapter">
+            <h2 class="chapter-title">Chapter 2: Speak to Your Machine</h2>
+            <p>Coding is like speaking to your computer, and prompting is like asking an intelligent assistant to think with you. Both skills require you to be clear and specific.</p>
+
+            <h3>What is Prompt Engineering?</h3>
+            <p>Prompt engineering is the art of framing your questions or instructions to get the best responses from AI tools. Think of it like programming, but instead of code, you use natural language.</p>
+
+            <h3>Examples:</h3>
+            <ul>
+                <li>A vague prompt: "Tell me something about Python."</li>
+                <li>A specific prompt: "What are the main features of Python, and why is it great for beginners?"</li>
+            </ul>
+            <p>The more details you provide, the better the response will be.</p>
+
+            <h3>Your First Prompt Exercise</h3>
+            <p>Ask an AI assistant like ChatGPT: "Explain Python in simple words for a 10-year-old." Notice how it adapts its response to match the audience.</p>
+
+            <h3>Combining Coding and Prompts</h3>
+            <p>You can also ask AI to help with your code! For example: "Write a Python program that calculates the area of a circle." The AI will generate a program, and you can learn from it.</p>
+        </section>
+
+        <section id="chapter3" class="chapter">
+            <h2 class="chapter-title">Chapter 3: Variables and Values</h2>
+            <p>A variable in programming is like a box where you store information. Imagine labeling a box "My Favorite Number" and putting the number 7 inside.</p>
+
+            <div class="code-block">
+                <code>
+<span class="blue">favorite_number</span> = <span class="red">7</span>
+<span class="blue">print</span>(<span class="red">f"My favorite number is {favorite_number}"</span>)
+                </code>
+            </div>
+
+            <h3>Why Are Variables Important?</h3>
+            <ul>
+                <li>They let your programs remember things, like a player's score in a game or a user's name.</li>
+                <li>They make your code more flexible and powerful.</li>
+            </ul>
+
+            <h3>Prompting Practice</h3>
+            <ul>
+                <li>"Explain how variables work in Python with examples."</li>
+                <li>"How do I create a variable for storing my age?"</li>
+            </ul>
+            <p>Notice how clear questions lead to useful examples.</p>
+        </section>
+
+        <section id="chapter4" class="chapter">
+            <h2 class="chapter-title">Chapter 4: Decisions and Loops</h2>
+            <p>Programs often need to make decisions. For example, imagine you're coding a game where the player wins if their score is 10 or more.</p>
+
+            <div class="code-block">
+                <code>
+<span class="blue">score</span> = <span class="red">12</span>
+<span class="green">if</span> <span class="blue">score</span> >= <span class="red">10</span>:
+    <span class="blue">print</span>(<span class="red">"You win!"</span>)
+<span class="green">else</span>:
+    <span class="blue">print</span>(<span class="red">"Keep trying!"</span>)
+                </code>
+            </div>
+
+            <h3>Loops: Doing Things Again and Again</h3>
+            <div class="code-block">
+                <code>
+<span class="green">for</span> <span class="blue">i</span> <span class="green">in</span> <span class="blue">range</span>(<span class="red">5</span>):
+    <span class="blue">print</span>(<span class="red">"This is loop number"</span>, <span class="blue">i</span>)
+                </code>
+            </div>
+
+            <h3>Prompting Practice</h3>
+            <ul>
+                <li>Ask an AI: "How do if-else statements work in Python?"</li>
+                <li>Challenge it: "Write a loop that counts from 1 to 10."</li>
+            </ul>
+        </section>
+
+        <section id="chapter5" class="chapter">
+            <h2 class="chapter-title">Chapter 5: Debugging and Asking Why</h2>
+            <p>Even the best programmers make mistakes, but debugging helps you fix them. Debugging is like solving a mystery: you find clues (error messages) and figure out what went wrong.</p>
+
+            <h3>Debugging Tips</h3>
+            <ol>
+                <li>Read the error message carefully.</li>
+                <li>Check your code for typos.</li>
+                <li>Test small parts of your program to find the problem.</li>
+            </ol>
+
+            <h3>Prompting Practice</h3>
+            <ul>
+                <li>"Why am I getting a SyntaxError in this code?"</li>
+                <li>"What's the best way to debug a Python program?"</li>
+            </ul>
+        </section>
+
+        <section id="chapter6" class="chapter">
+            <h2 class="chapter-title">Chapter 6: Build a Mini Project</h2>
+            <p>Let's create something fun: a simple calculator!</p>
+
+            <div class="code-block">
+                <code>
+<span class="green">def</span> <span class="yellow">add_numbers</span>(<span class="blue">a</span>, <span class="blue">b</span>):
+    <span class="green">return</span> <span class="blue">a</span> + <span class="blue">b</span>
+
+<span class="blue">num1</span> = <span class="blue">int</span>(<span class="blue">input</span>(<span class="red">"Enter the first number: "</span>))
+<span class="blue">num2</span> = <span class="blue">int</span>(<span class="blue">input</span>(<span class="red">"Enter the second number: "</span>))
+<span class="blue">result</span> = <span class="yellow">add_numbers</span>(<span class="blue">num1</span>, <span class="blue">num2</span>)
+<span class="blue">print</span>(<span class="red">"The result is:"</span>, <span class="blue">result</span>)
+                </code>
+            </div>
+
+            <h3>Prompting Practice</h3>
+            <ul>
+                <li>"How can I make this calculator handle more operations, like subtraction?"</li>
+                <li>"Can you help me make this code look more professional?"</li>
+            </ul>
+        </section>
+
+        <section id="chapter7" class="chapter">
+            <h2 class="chapter-title">Chapter 7: Thinking Like a Developer</h2>
+            <p>Being a developer isn't just about writing code; it's about solving problems. Break problems into smaller steps, test your ideas, and keep improving.</p>
+
+            <h3>Prompting Practice</h3>
+            <ul>
+                <li>Use AI tools as your partner. Ask things like:</li>
+                <li>"What are the steps to build a to-do list app?"</li>
+                <li>"How do I make my program run faster?"</li>
+            </ul>
+        </section>
+
+        <section id="epilogue" class="chapter">
+            <h2 class="chapter-title">Epilogue: Your Journey Begins</h2>
+            <p>You've taken your first steps into coding and prompting. Keep learning, keep experimenting, and remember: every great developer started where you are today. The future is yours to create.</p>
+        </section>
+
+        <section id="author" class="author-section">
+            <div class="author-avatar"></div>
+            <div>
+                <h2 style="color: #569CD6;">Adithya</h2>
+                <p>A passionate developer and educator who loves sharing coding knowledge with young minds.</p>
+                <p>Follow on Instagram: <a href="#" style="color: #9CDCFE;">@meetadithya</a></p>
+            </div>
+        </section>
+
+        
